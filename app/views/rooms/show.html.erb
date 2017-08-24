@@ -1,0 +1,143 @@
+
+<div class="row">
+
+<div class="col-xs-12 col-sm-12 col-md-6 col-lg-6"> 
+<div id="map"></div>
+    <script>
+      function initMap() {
+        var uluru = {lat: <%= @room.latitude %>, lng: <%= @room.longitude %>};
+        var map = new google.maps.Map(document.getElementById('map'), {
+          zoom: 10,
+          center: uluru
+        });
+        var marker = new google.maps.Marker({
+          position: uluru,
+          map: map
+        });
+      }
+    </script>
+    <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCHOnCFKBdLisShrN4r41bfyqR02ZWZ6Bs&callback=initMap">
+    </script>
+
+<h3>Nearby</h3>
+      <% for room in @room.nearbys(10) %>
+       <li><%= link_to room.location, room %> (<%= room.distance.round(2) %> kilometers away) </li>
+<% end %>
+   </div>
+
+
+<div class="col-xs-12 col-sm-12 col-md-6 col-lg-6" id="indroom"> 
+<p>
+  <strong>Photo:</strong><br>
+  <%= image_tag(@room.avatar.url(:thumb)) %>
+</p>
+
+
+<p> 
+<strong>Host Name:</strong> <%= @room.host_name %>
+</p>
+
+
+<p>
+  <strong>Price:</strong>
+  <%= @room.price %>
+</p>
+
+
+<p>
+  <strong>Room name:</strong>
+  <%= @room.room_name %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @room.description %>
+</p>
+
+<p>
+  <strong>Country:</strong>
+  <%= @room.country %>
+</p>
+
+<p>
+  <strong>Location:</strong>
+  <%= @room.location %>
+</p>
+
+<p>
+  <strong>Bed:</strong>
+  <%= @room.bed %>
+</p>
+
+<p>
+  <strong>Bathroom:</strong>
+  <%= @room.bathroom %>
+</p>
+
+<p>
+<strong>Capacity:</strong>
+<%= @room.capacity %>
+</p>
+
+<p>
+<strong>Pets:</strong>
+<%= @room.pets %>
+</p>
+
+<p>
+<strong>Smoking:</strong>
+<%= @room.smoking %>
+</p>
+
+<p>
+<strong>Wifi:</strong>
+<%= @room.wifi %>
+</p>
+
+<%= render 'bookings/form', booking: @booking %>
+
+
+<p> AVERAGE RATING <p>
+<div id="rating">
+<div class="average-review-rating" data-score=<%= @average_review %>></div>
+<span> Based on <%=@room.reviews.count %> review/s </span>
+</div>
+</p>
+
+
+<!-- Review & Ratings -->
+</br>
+</br>
+
+<%= render @room.reviews %>
+
+<div>
+  <%= link_to "Add Review", new_room_review_path(@room) %>
+</div>
+
+
+<%= link_to 'Edit', edit_room_path(@room) %> |
+<%= link_to 'Back', rooms_path %>
+</div>
+
+<script>
+   $('.review-rating').raty({
+     readOnly: true,
+     score: function() {
+       return $(this).attr('data-score');
+     }
+   });
+ </script>
+
+ <script>
+   $('.average-review-rating').raty({
+     readOnly: true,
+     score: function() {
+       return $(this).attr('data-score')
+     }
+   });
+ </script>
+
+
+

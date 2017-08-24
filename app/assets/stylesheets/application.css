@@ -1,0 +1,187 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+
+ @import url('https://fonts.googleapis.com/css?family=Cabin');
+ @import "bootstrap-sprockets";
+ @import "bootstrap";
+
+#map {
+    height: 500px;
+    width: 50%;
+    margin-left: 20px;
+    margin-top: 50px;
+    border: 2px solid #fd5c63;
+     }
+
+#indroom{
+    margin-top: 50px;
+}
+
+ body { 
+    font-family: 'Cabin', sans-serif;
+    font-size: 18px;
+}
+
+footer {
+    margin-top: 400px;
+}
+  
+
+table, td, th { 
+    vertical-align: middle; 
+    border: none; 
+     }
+
+
+th { 
+    border-bottom: 1px solid #DDD; 
+    }
+
+
+.round-image-50 {
+    background-color: white;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    overflow: hidden;
+     }
+
+#allmap{
+    width: 100%;
+    height: 400px;
+    text-align: center;
+}
+
+#logo {
+    height: 50px;
+}
+
+#logo a:hover, li:hover {
+    text-decoration: none;
+    border:none !important;
+    background-color: white;
+}
+
+.navbar {
+    position: fixed;
+    top: 0;
+    height: 60px;
+    background-color: white;
+    width: 100%;
+    padding-right: 30px;
+}
+
+.navbar-link img {
+    width: 30px;
+    border-radius: 50px;
+    padding: 0 0 0 0;
+}
+
+.navbar li:hover, a:hover {
+    text-decoration: none;
+    background-color: white;
+}
+
+.brand {
+    color: #fd5c63;
+    font-size: 20px;
+}
+
+.container-fluid {
+    width: 100%;
+}
+
+
+.frontimg {
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 100%;
+    height: 80%;
+    background-size: 100%;
+    z-index: -1;
+    padding-top: 0%;
+    position: absolute;
+}
+
+.btn {
+    font-size: 20px;
+    margin-top: 80%;
+}
+
+.frontlink {
+    z-index: 100;
+    position: absolute;
+    top: 20px;
+}
+
+.signup {
+    text-align: center;
+}
+
+.form-control {
+    width: 50%;
+    margin-left: 25%;
+}
+
+.login {
+    text-align: center;
+}
+
+.newroom {
+    text-align: center;
+}
+
+.roomform {
+    font-size: 12px;
+}
+
+#rating-form {
+    text-align: center;
+}
+
+@media only screen and (max-width: 768px) {
+    .container {
+    padding: 0 0 0 0;
+    margin: 0 0 0 0;
+    max-width: 100%;
+}
+
+.frontimg {
+    padding-top: 100px;
+}
+
+.btn {
+    font-size: 16px;
+    margin-top: 120%;
+}
+
+.frontlink {
+    z-index: 100;
+    position: absolute;
+    top: 20px;
+}
+
+#map {
+    height: 200px;
+    width: 90%;
+    margin-left: 20px;
+    margin-top: 50px;
+    border: 2px solid #fd5c63;
+     }
+
+#indroom {
+    text-align: center;
+}}
