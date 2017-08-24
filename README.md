@@ -1,22 +1,17 @@
+### Airbnb Clone App using Ruby on Rails
 
-# Airbnb-app
-=======
-# FEATURES:
-  - Login - DONE
-  - Login with OmniAuth - DONE
-  - Rooms - DONE
-  - Ratings - DONE but still need to integrate with bookings
-  - GOOGLE MAP - DONE
-  - BOOKINGS - IN PROGRESS
-  - PAYPAL - IN PROGRESS
-<<<<<<< HEAD
->>>>>>> 5feb2f32d1b75b8c30ae6d3c9ff6371332975239
-# Airbnb-app
-# airbnb_new
-# airbnb-app
-# airbnb-app-final
-=======
->>>>>>> dce26c2f005a04950d404bd3be009bc50f2e0b5f
-# airbnb-app
-# Airbnb-Clone-App
-# Airbnb-clone-app-project
+ #### Features of this app:
+  - Login system 
+     -option of signing in to Facebook using Omniauth
+
+
+  - Hosting of rooms which is viewable by many including Google Maps API of the room location
+  - Booking of rooms by aunthenticated users and option to write comments and ratings based 
+    on customer's experience/feedback.
+    
+ #### Further work need to be done:
+   - enhance styling
+   - add multiple photo upload
+   - add Paypal
+   
+ #### Screenshots
